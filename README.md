@@ -41,38 +41,58 @@ SELECT * FROM Customers ORDER BY Country ASC, CustomerName DESC;
 
 ```sql
 --  Select all customers from Spain that starts with the letter 'G'
-SELECT * FROM Customers WHERE Country = 'Spain' AND CustomerName LIKE 'G%';
---  Select all fields from Customers where Country is "Germany" AND City is "Berlin" AND PostalCode is higher than 12000
-SELECT * FROM Customers WHERE Country = 'Germany' AND City = 'Berlin' AND PostalCode > 12000;
+SELECT * FROM Customers 
+WHERE Country = 'Spain' AND CustomerName LIKE 'G%';
+
+--  Select all fields from Customers where Country is "Germany" AND City is "Berlin"
+--  AND PostalCode is higher than 12000
+SELECT * FROM Customers 
+WHERE Country = 'Germany' AND City = 'Berlin' AND PostalCode > 12000;
+
 --  Select all customers from Spain that starts with a "G" or an "R
-SELECT * FROM Customers WHERE Country = 'Spain' AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');
+SELECT * FROM Customers 
+WHERE Country = 'Spain' AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');
+
 --  Select all customers that either are from Spain and starts with either "G", or starts with the letter "R"
-SELECT * FROM Customers WHERE Country = 'Spain' AND CustomerName LIKE 'G%' OR CustomerName LIKE 'R%';
+SELECT * FROM Customers 
+WHERE Country = 'Spain' AND CustomerName LIKE 'G%' OR CustomerName LIKE 'R%';
 ```
 
 ```sql
 --  Select all customers from Germany or Spain
 SELECT * FROM Customers WHERE Country = 'Germany' OR Country = 'Spain';
---  Select all fields from Customers where either City is "Berlin", CustomerName starts with the letter "G" or Country is "Norway"
-SELECT * FROM Customers WHERE City = 'Berlin' OR CustomerName LIKE 'G%' OR Country = 'Norway';
+
+--  Select all fields from Customers where either City is "Berlin", CustomerName 
+--  starts with the letter "G" or Country is "Norway"
+SELECT * FROM Customers 
+WHERE City = 'Berlin' OR CustomerName LIKE 'G%' OR Country = 'Norway';
+
 --  Select all Spanish customers that starts with either "G" or "R"
-SELECT * FROM Customers WHERE Country = 'Spain' AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');
+SELECT * FROM Customers 
+WHERE Country = 'Spain' AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');
+
 --  Select all customers that either are from Spain and starts with either "G", or starts with the letter "R"
-SELECT * FROM Customers WHERE Country = 'Spain' AND CustomerName LIKE 'G%' OR CustomerName LIKE 'R%';
+SELECT * FROM Customers 
+WHERE Country = 'Spain' AND CustomerName LIKE 'G%' OR CustomerName LIKE 'R%';
 ```
 
 ```sql
 --  Select only the customers that are NOT from Spain
 SELECT * FROM Customers WHERE NOT Country = 'Spain';
+
 --  Select customers that does not start with the letter 'A'
 SELECT * FROM Customers WHERE CustomerName NOT LIKE 'A%';
+
 --  Select customers with a customerId not between 10 and 60
 SELECT * FROM Customers WHERE CustomerId NOT BETWEEN 10 AND 60;
+
 --  Select customers that are not from Paris or London
 SELECT * FROM Customers WHERE City NOT IN ('Paris', 'London');
+
 --  Select customers with a CustomerId not greater than 50
 SELECT * FROM Customers WHERE NOT CustomerId > 50;
 SELECT * FROM Customers WHERE CustomerId !> 50;
+
 --  Select customers with a CustomerId not less than 50
 SELECT * FROM Customers WHERE NOT CustomerId < 50;
 SELECT * FROM Customers WHERE CustomerId !< 50;
@@ -322,7 +342,8 @@ ORDER BY A.City;
 ```
 
 ```sql
---  The UNION operator selects only distinct values by default. To allow duplicate values, use UNION ALL
+--  The UNION operator selects only distinct values by default.
+--  To allow duplicate values, use UNION ALL
 SELECT City FROM Customers
 UNION
 SELECT City FROM Suppliers
