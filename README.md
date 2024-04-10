@@ -157,14 +157,18 @@ SELECT CategoryId, MIN(Price) AS SmallestPrice FROM Products GROUP BY CategoryId
 
 ```sql
 SELECT COUNT(*) FROM Products;
+
 --  You can specify a column name instead of the asterix symbol (*).
 --  If you specify a column name instead of (*), NULL values will not be counted.
 --  Find the number of products where the ProductName is not null
 SELECT COUNT(ProductName) FROM Products;
+
 --  Find the number of products where Price is higher than 20
 SELECT COUNT(ProductId) FROM Products WHERE Price > 20;
+
 --  How many different prices are there in the Products table
 SELECT COUNT(DISTINCT Price) FROM Products;
+
 --  Name the column "Number of records"
 SELECT COUNT(*) AS [Number of records] FROM Products;
 SELECT CategoryId, COUNT(*) AS [Number of records] FROM Products GROUP BY CategoryId;
