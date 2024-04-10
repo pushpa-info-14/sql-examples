@@ -13,7 +13,7 @@ USE W3Schools;
 -- Table structure for table Categories
 --
 CREATE TABLE Categories (
-  CategoryID int NOT NULL,
+  CategoryId int NOT NULL,
   CategoryName varchar(255) DEFAULT NULL,
   Description varchar(255) DEFAULT NULL
 );
@@ -22,7 +22,7 @@ CREATE TABLE Categories (
 -- Dumping data for table Categories
 --
 
-INSERT INTO Categories (CategoryID, CategoryName, Description) VALUES
+INSERT INTO Categories (CategoryId, CategoryName, Description) VALUES
 (1, 'Beverages', 'Soft drinks, coffees, teas, beers, and ales'),
 (2, 'Condiments', 'Sweet and savory sauces, relishes, spreads, and seasonings'),
 (3, 'Confections', 'Desserts, candies, and sweet breads'),
@@ -38,7 +38,7 @@ INSERT INTO Categories (CategoryID, CategoryName, Description) VALUES
 -- Table structure for table Customers
 --
 CREATE TABLE Customers (
-  CustomerID int NOT NULL,
+  CustomerId int NOT NULL,
   CustomerName varchar(255) DEFAULT NULL,
   ContactName varchar(255) DEFAULT NULL,
   Address varchar(255) DEFAULT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE Customers (
 -- Dumping data for table Customers
 --
 
-INSERT INTO Customers (CustomerID, CustomerName, ContactName, Address, City, PostalCode, Country) VALUES
+INSERT INTO Customers (CustomerId, CustomerName, ContactName, Address, City, PostalCode, Country) VALUES
 (1, 'Alfreds Futterkiste', 'Maria Anders', 'Obere Str. 57', 'Berlin', '12209', 'Germany'),
 (2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Avda. de la Constitución 2222', 'México D.F.', '05021', 'Mexico'),
 (3, 'Antonio Moreno Taquería', 'Antonio Moreno', 'Mataderos 2312', 'México D.F.', '05023', 'Mexico'),
@@ -150,7 +150,7 @@ INSERT INTO Customers (CustomerID, CustomerName, ContactName, Address, City, Pos
 -- Table structure for table Employees
 --
 CREATE TABLE Employees (
-  EmployeeID int NOT NULL,
+  EmployeeId int NOT NULL,
   LastName varchar(255) DEFAULT NULL,
   FirstName varchar(255) DEFAULT NULL,
   BirthDate date DEFAULT NULL,
@@ -162,17 +162,17 @@ CREATE TABLE Employees (
 -- Dumping data for table Employees
 --
 
-INSERT INTO Employees (EmployeeID, LastName, FirstName, BirthDate, Photo, Notes) VALUES
-(1, 'Davolio', 'Nancy', '1968-12-08', 'EmpID1.pic', 'Education includes a BA in psychology from Colorado State University. She also completed (The Art of the Cold Call). Nancy is a member of ''Toastmasters International''.'),
-(2, 'Fuller', 'Andrew', '1952-02-19', 'EmpID2.pic', 'Andrew received his BTS commercial and a Ph.D. in international marketing from the University of Dallas. He is fluent in French and Italian and reads German. He joined the company as a sales representative, was promoted to sales manager and was then named vice president of sales. Andrew is a member of the Sales Management Roundtable, the Seattle Chamber of Commerce, and the Pacific Rim Importers Association.'),
-(3, 'Leverling', 'Janet', '1963-08-30', 'EmpID3.pic', 'Janet has a BS degree in chemistry from Boston College). She has also completed a certificate program in food retailing management. Janet was hired as a sales associate and was promoted to sales representative.'),
-(4, 'Peacock', 'Margaret', '1958-09-19', 'EmpID4.pic', 'Margaret holds a BA in English literature from Concordia College and an MA from the American Institute of Culinary Arts. She was temporarily assigned to the London office before returning to her permanent post in Seattle.'),
-(5, 'Buchanan', 'Steven', '1955-03-04', 'EmpID5.pic', 'Steven Buchanan graduated from St. Andrews University, Scotland, with a BSC degree. Upon joining the company as a sales representative, he spent 6 months in an orientation program at the Seattle office and then returned to his permanent post in London, where he was promoted to sales manager. Mr. Buchanan has completed the courses ''Successful Telemarketing'' and ''International Sales Management''. He is fluent in French.'),
-(6, 'Suyama', 'Michael', '1963-07-02', 'EmpID6.pic', 'Michael is a graduate of Sussex University (MA, economics) and the University of California at Los Angeles (MBA, marketing). He has also taken the courses ''Multi-Cultural Selling'' and ''Time Management for the Sales Professional''. He is fluent in Japanese and can read and write French, Portuguese, and Spanish.'),
-(7, 'King', 'Robert', '1960-05-29', 'EmpID7.pic', 'Robert King served in the Peace Corps and traveled extensively before completing his degree in English at the University of Michigan and then joining the company. After completing a course entitled ''Selling in Europe'', he was transferred to the London office.'),
-(8, 'Callahan', 'Laura', '1958-01-09', 'EmpID8.pic', 'Laura received a BA in psychology from the University of Washington. She has also completed a course in business French. She reads and writes French.'),
-(9, 'Dodsworth', 'Anne', '1969-07-02', 'EmpID9.pic', 'Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German.'),
-(10, 'West', 'Adam', '1928-09-19', 'EmpID10.pic', 'An old chum.');
+INSERT INTO Employees (EmployeeId, LastName, FirstName, BirthDate, Photo, Notes) VALUES
+(1, 'Davolio', 'Nancy', '1968-12-08', 'EmpId1.pic', 'Education includes a BA in psychology from Colorado State University. She also completed (The Art of the Cold Call). Nancy is a member of ''Toastmasters International''.'),
+(2, 'Fuller', 'Andrew', '1952-02-19', 'EmpId2.pic', 'Andrew received his BTS commercial and a Ph.D. in international marketing from the University of Dallas. He is fluent in French and Italian and reads German. He joined the company as a sales representative, was promoted to sales manager and was then named vice president of sales. Andrew is a member of the Sales Management Roundtable, the Seattle Chamber of Commerce, and the Pacific Rim Importers Association.'),
+(3, 'Leverling', 'Janet', '1963-08-30', 'EmpId3.pic', 'Janet has a BS degree in chemistry from Boston College). She has also completed a certificate program in food retailing management. Janet was hired as a sales associate and was promoted to sales representative.'),
+(4, 'Peacock', 'Margaret', '1958-09-19', 'EmpId4.pic', 'Margaret holds a BA in English literature from Concordia College and an MA from the American Institute of Culinary Arts. She was temporarily assigned to the London office before returning to her permanent post in Seattle.'),
+(5, 'Buchanan', 'Steven', '1955-03-04', 'EmpId5.pic', 'Steven Buchanan graduated from St. Andrews University, Scotland, with a BSC degree. Upon joining the company as a sales representative, he spent 6 months in an orientation program at the Seattle office and then returned to his permanent post in London, where he was promoted to sales manager. Mr. Buchanan has completed the courses ''Successful Telemarketing'' and ''International Sales Management''. He is fluent in French.'),
+(6, 'Suyama', 'Michael', '1963-07-02', 'EmpId6.pic', 'Michael is a graduate of Sussex University (MA, economics) and the University of California at Los Angeles (MBA, marketing). He has also taken the courses ''Multi-Cultural Selling'' and ''Time Management for the Sales Professional''. He is fluent in Japanese and can read and write French, Portuguese, and Spanish.'),
+(7, 'King', 'Robert', '1960-05-29', 'EmpId7.pic', 'Robert King served in the Peace Corps and traveled extensively before completing his degree in English at the University of Michigan and then joining the company. After completing a course entitled ''Selling in Europe'', he was transferred to the London office.'),
+(8, 'Callahan', 'Laura', '1958-01-09', 'EmpId8.pic', 'Laura received a BA in psychology from the University of Washington. She has also completed a course in business French. She reads and writes French.'),
+(9, 'Dodsworth', 'Anne', '1969-07-02', 'EmpId9.pic', 'Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German.'),
+(10, 'West', 'Adam', '1928-09-19', 'EmpId10.pic', 'An old chum.');
 
 -- --------------------------------------------------------
 
@@ -181,18 +181,18 @@ INSERT INTO Employees (EmployeeID, LastName, FirstName, BirthDate, Photo, Notes)
 --
 
 CREATE TABLE Orders (
-  OrderID int NOT NULL,
-  CustomerID int DEFAULT NULL,
-  EmployeeID int DEFAULT NULL,
+  OrderId int NOT NULL,
+  CustomerId int DEFAULT NULL,
+  EmployeeId int DEFAULT NULL,
   OrderDate date DEFAULT NULL,
-  ShipperID int DEFAULT NULL
+  ShipperId int DEFAULT NULL
 );
 
 --
 -- Dumping data for table Orders
 --
 
-INSERT INTO Orders (OrderID, CustomerID, EmployeeID, OrderDate, ShipperID) VALUES
+INSERT INTO Orders (OrderId, CustomerId, EmployeeId, OrderDate, ShipperId) VALUES
 (10248, 90, 5, '1996-07-04', 3),
 (10249, 81, 6, '1996-07-05', 1),
 (10250, 34, 4, '1996-07-08', 2),
@@ -397,9 +397,9 @@ INSERT INTO Orders (OrderID, CustomerID, EmployeeID, OrderDate, ShipperID) VALUE
 --
 
 CREATE TABLE OrderDetails (
-  OrderDetailID int NOT NULL,
-  OrderID int DEFAULT NULL,
-  ProductID int DEFAULT NULL,
+  OrderDetailId int NOT NULL,
+  OrderId int DEFAULT NULL,
+  ProductId int DEFAULT NULL,
   Quantity int DEFAULT NULL
 );
 
@@ -407,7 +407,7 @@ CREATE TABLE OrderDetails (
 -- Dumping data for table OrderDetails
 --
 
-INSERT INTO OrderDetails (OrderDetailID, OrderID, ProductID, Quantity) VALUES
+INSERT INTO OrderDetails (OrderDetailId, OrderId, ProductId, Quantity) VALUES
 (1, 10248, 11, 12),
 (2, 10248, 42, 10),
 (3, 10248, 72, 5),
@@ -934,10 +934,10 @@ INSERT INTO OrderDetails (OrderDetailID, OrderID, ProductID, Quantity) VALUES
 --
 
 CREATE TABLE Products (
-  ProductID int NOT NULL,
+  ProductId int NOT NULL,
   ProductName varchar(255) DEFAULT NULL,
-  SupplierID int DEFAULT NULL,
-  CategoryID int DEFAULT NULL,
+  SupplierId int DEFAULT NULL,
+  CategoryId int DEFAULT NULL,
   Unit varchar(255) DEFAULT NULL,
   Price decimal NOT NULL
 );
@@ -946,7 +946,7 @@ CREATE TABLE Products (
 -- Dumping data for table Products
 --
 
-INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, Unit, Price) VALUES
+INSERT INTO Products (ProductId, ProductName, SupplierId, CategoryId, Unit, Price) VALUES
 (1, 'Chais', 1, 1, '10 boxes x 20 bags', 18),
 (2, 'Chang', 1, 1, '24 - 12 oz bottles', 19),
 (3, 'Aniseed Syrup', 1, 2, '12 - 550 ml bottles', 10),
@@ -1032,7 +1032,7 @@ INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, Unit, Pric
 --
 
 CREATE TABLE Shippers (
-  ShipperID int NOT NULL,
+  ShipperId int NOT NULL,
   ShipperName varchar(255) DEFAULT NULL,
   Phone varchar(255) DEFAULT NULL
 );
@@ -1041,7 +1041,7 @@ CREATE TABLE Shippers (
 -- Dumping data for table Shippers
 --
 
-INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES
+INSERT INTO Shippers (ShipperId, ShipperName, Phone) VALUES
 (1, 'Speedy Express', '(503) 555-9831'),
 (2, 'United Package', '(503) 555-3199'),
 (3, 'Federal Shipping', '(503) 555-9931');
@@ -1053,7 +1053,7 @@ INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES
 --
 
 CREATE TABLE Suppliers (
-  SupplierID int NOT NULL,
+  SupplierId int NOT NULL,
   SupplierName varchar(255) DEFAULT NULL,
   ContactName varchar(255) DEFAULT NULL,
   Address varchar(255) DEFAULT NULL,
@@ -1067,7 +1067,7 @@ CREATE TABLE Suppliers (
 -- Dumping data for table Suppliers
 --
 
-INSERT INTO Suppliers (SupplierID, SupplierName, ContactName, Address, City, PostalCode, Country, Phone) VALUES
+INSERT INTO Suppliers (SupplierId, SupplierName, ContactName, Address, City, PostalCode, Country, Phone) VALUES
 (1, 'Exotic Liquid', 'Charlotte Cooper', '49 Gilbert St.', 'Londona', 'EC1 4SD', 'UK', '(171) 555-2222'),
 (2, 'New Orleans Cajun Delights', 'Shelley Burke', 'P.O. Box 78934', 'New Orleans', '70117', 'USA', '(100) 555-4822'),
 (3, 'Grandma Kelly''s Homestead', 'Regina Murphy', '707 Oxford Rd.', 'Ann Arbor', '48104', 'USA', '(313) 555-5735'),
@@ -1106,61 +1106,61 @@ INSERT INTO Suppliers (SupplierID, SupplierName, ContactName, Address, City, Pos
 -- Indexes for table Categories
 --
 ALTER TABLE Categories
-  ADD PRIMARY KEY (CategoryID);
+  ADD PRIMARY KEY (CategoryId);
 
 --
 -- Indexes for table Customers
 --
 ALTER TABLE Customers
-  ADD PRIMARY KEY (CustomerID);
+  ADD PRIMARY KEY (CustomerId);
 
 --
 -- Indexes for table Employees
 --
 ALTER TABLE Employees
-  ADD PRIMARY KEY (EmployeeID);
+  ADD PRIMARY KEY (EmployeeId);
 
 --
 -- Indexes for table Shippers
 --
 ALTER TABLE Shippers
-  ADD PRIMARY KEY (ShipperID);
+  ADD PRIMARY KEY (ShipperId);
 
 --
 -- Indexes for table Suppliers
 --
 ALTER TABLE Suppliers
-  ADD PRIMARY KEY (SupplierID);
+  ADD PRIMARY KEY (SupplierId);
 
 --
 -- Indexes for table Products
 --
 ALTER TABLE Products
-  ADD PRIMARY KEY (ProductID);
+  ADD PRIMARY KEY (ProductId);
 
 ALTER TABLE Orders
-  ADD PRIMARY KEY (OrderID)
+  ADD PRIMARY KEY (OrderId)
 --
 -- Indexes for table Orders
 --
 ALTER TABLE Orders
   ADD
-  FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
-  FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID),
-  FOREIGN KEY (ShipperID) REFERENCES Shippers(ShipperID);
+  FOREIGN KEY (CustomerId) REFERENCES Customers(CustomerId),
+  FOREIGN KEY (EmployeeId) REFERENCES Employees(EmployeeId),
+  FOREIGN KEY (ShipperId) REFERENCES Shippers(ShipperId);
 
 --
 -- Indexes for table OrderDetails
 --
 ALTER TABLE OrderDetails
   ADD
-  FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
-  FOREIGN KEY (ProductID) REFERENCES Products(ProductID);
+  FOREIGN KEY (OrderId) REFERENCES Orders(OrderId),
+  FOREIGN KEY (ProductId) REFERENCES Products(ProductId);
 
 --
 -- Indexes for table Products
 --
 ALTER TABLE Products
   ADD
-  FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID),
-  FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID);
+  FOREIGN KEY (CategoryId) REFERENCES Categories(CategoryId),
+  FOREIGN KEY (SupplierId) REFERENCES Suppliers(SupplierId);
