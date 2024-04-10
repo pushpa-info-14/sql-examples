@@ -19,15 +19,15 @@ SELECT * FROM Customers WHERE CustomerId > 80;
 ```
 
 ```sql
---	=		Equal
---	>		Greater than
---	<		Less than
---	>=		Greater than or equal
---	<=		Less than or equal
---	<>		Not equal. Note: In some versions of SQL this operator may be written as !=
---	BETWEEN	Between a certain range
---	LIKE	Search for a pattern
---	IN		To specify multiple possible values for a column
+--	=       Equal
+--	>       Greater than
+--	<       Less than
+--	>=      Greater than or equal
+--	<=      Less than or equal
+--	<>      Not equal. Note: In some versions of SQL this operator may be written as !=
+--	BETWEEN Between a certain range
+--	LIKE    Search for a pattern
+--	IN      To specify multiple possible values for a column
 ```
 
 ```sql
@@ -237,8 +237,13 @@ SELECT * FROM Orders WHERE OrderDate BETWEEN '1996-07-01' AND '1996-07-31';
 SELECT CustomerId AS Id, CustomerName AS Customer FROM Customers;
 SELECT ProductName AS [My Great Products] FROM Products;
 SELECT ProductName AS "My Great Products" FROM Products;
-SELECT CustomerName, [Address] + ', ' + PostalCode + ' ' + City + ', ' + Country AS [Address] FROM Customers;
-SELECT CustomerName, CONCAT([Address],', ',PostalCode,', ',City,', ',Country) AS [Address] FROM Customers;
+
+SELECT CustomerName, [Address] + ', ' + PostalCode + ' ' + City + ', ' + Country AS [Address] 
+FROM Customers;
+
+SELECT CustomerName, CONCAT([Address],', ',PostalCode,', ',City,', ',Country) AS [Address] 
+FROM Customers;
+
 SELECT * FROM Customers AS Persons;
 
 SELECT o.OrderId, o.OrderDate, c.CustomerName
@@ -384,11 +389,17 @@ HAVING COUNT(Orders.OrderId) > 25;
 ```sql
 SELECT SupplierName
 FROM Suppliers
-WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierId = Suppliers.supplierId AND Price < 20);
+WHERE EXISTS (
+    SELECT ProductName FROM Products 
+    WHERE Products.SupplierId = Suppliers.supplierId AND Price < 20
+);
 
 SELECT SupplierName
 FROM Suppliers
-WHERE EXISTS (SELECT ProductName FROM Products WHERE Products.SupplierId = Suppliers.supplierId AND Price = 22);
+WHERE EXISTS (
+    SELECT ProductName FROM Products 
+    WHERE Products.SupplierId = Suppliers.supplierId AND Price = 22
+);
 ```
 
 ```sql
